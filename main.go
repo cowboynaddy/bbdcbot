@@ -152,7 +152,7 @@ func main() {
 		}
 		r := rand.Intn(300) + 120
 		s := fmt.Sprint(time.Duration(r) * time.Second)
-		alert("Retrigger in: "+s, bot, chatID)
+		alert("Bot will fire again in: "+s, bot, chatID)
 		time.AfterFunc(30*time.Second, ping)
 		time.Sleep(time.Duration(r) * time.Second)
 	}
